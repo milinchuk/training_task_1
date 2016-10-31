@@ -7,14 +7,35 @@ import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 
 /**
- * Created by click on 10/31/2016.
+ * Class for testing input data
+ *
+ * @author Anastasia Milinchuk
+ * @since 10/31/2016
  */
 public class NumberValidatorTest {
+    /**
+     * Start range for generate secret number
+     */
     private int xRange;
+
+    /**
+     * End of range for generation secret number
+     */
     private int yRange;
+
+    /**
+     * Right input number by user is string
+     */
     private String rightInput;
+
+    /**
+     * Wrong input number by user is string
+     */
     private String wrongInput;
 
+    /**
+     * Set up attributes
+     */
     @Before
     public void setUp(){
         xRange = 0;
@@ -23,8 +44,11 @@ public class NumberValidatorTest {
         wrongInput = "qwe";
     }
 
+    /**
+     * Check rightness of input number: is number in range
+     */
     @Test
-    public void testNumberIsInRangeNumber(){
+    public void testNumberIsInRange(){
         Error error = new Error();
         NumberValidator.numberInRangeValidate(yRange + 1, xRange, yRange, error);
         assertTrue(error.hasError());
@@ -36,6 +60,9 @@ public class NumberValidatorTest {
         assertTrue(!error.hasError());
     }
 
+    /**
+     * Check is input value is number
+     */
     @Test
     public void testIsIntNumber(){
         Error error = new Error();

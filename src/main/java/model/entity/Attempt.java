@@ -3,17 +3,33 @@ package model.entity;
 import model.utils.Util;
 
 /**
- * Created by click on 10/30/2016.
+ * Current attempt of user
+ *
+ * @author Anastasia Milinchuk
+ * @since 10/30/2016.
  */
 public class Attempt {
+    /**
+     * Current number which user enter
+     */
     private int number;
+
+    /**
+     * Message about rightness of input number
+     */
     private String message;
 
     public Attempt() {
     }
 
-    public Attempt(int value, String message) {
-        this.number = value;
+    /**
+     * Initialization of attempt
+     *
+     * @param number is current number which user enter
+     * @param message about rightness of input number
+     */
+    public Attempt(int number, String message) {
+        this.number = number;
         this.message = message;
     }
 

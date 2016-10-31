@@ -4,17 +4,46 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by click on 10/30/2016.
+ * Result is answer from {@link model.ComputerBrainModel} to asking about secret number.
+ * Containing current attempt, history and list of answers.
+ *
+ * @author Anastasia Milinchuk
+ * @since 10/30/2016
  */
 public class Result {
+    /**
+     * Answer when current number more than secret
+     */
     public static final String MORE = "More";
+
+    /**
+     * Answer when current number equal to secret
+     */
     public static final String EQUAL = "Equal";
+
+    /**
+     * Answer when current number less than secret
+     */
     public static final String LESS = "Less";
 
+    /**
+     * Current user attempt
+     */
     private Attempt attempt;
+
+    /**
+     * Result of correctness current attempt
+     */
     private boolean isCorrect;
+
+    /**
+     * History of all attempts
+     */
     private List<Attempt> attemptList;
 
+    /**
+     * Initialize of {@link Result}
+     */
     public Result() {
         attemptList = new ArrayList<Attempt>();
         isCorrect = false;
