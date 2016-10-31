@@ -1,4 +1,5 @@
-import java.controller.Controller;
+
+import controller.Controller;
 import model.ComputerBrainModel;
 import view.View;
 

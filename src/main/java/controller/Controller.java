@@ -44,7 +44,6 @@ public class Controller {
 
         view.showWin();
         view.showAttempts(result.getAttemptList().toString());
-
     }
 
     private void nextStep(int number, Result result){
@@ -59,8 +58,7 @@ public class Controller {
             Scanner scanner = new Scanner(System.in);
             return scanner.next();
         }catch (Exception e){
-            return new String();
+            return null;
         }
-
     }
 }

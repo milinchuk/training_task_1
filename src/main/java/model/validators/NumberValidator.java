@@ -12,11 +12,11 @@ public class NumberValidator {
     public static void dataValidate(String input, int x, int y, Error error){
         isIntNumber(input, error);
         if(!error.hasError()){
-            numberValidate(Integer.parseInt(input), x, y, error);
+            numberInRangeValidate(Integer.parseInt(input), x, y, error);
         }
     }
 
-    public static void numberValidate(int number, int x, int y,  Error error){
+    public static void numberInRangeValidate(int number, int x, int y, Error error){
         if(number < x || number > y){
             error.setHasError(true);
             error.setMessage(NUMBER_OUT_OF_RANGE);
